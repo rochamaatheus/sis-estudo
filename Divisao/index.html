@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anatomia de uma Divisão</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <main>
+    <h1>Anatomia de uma Divisão</h1>
+    <form id="myForm">
+      <label for="d1">Dividendo</label>
+      <input type="number" name="d1" id="d1" min="0">
+      <label for="d2">Divisor</label>
+      <input type="number" name="d2" id="d2" min="1">
+      <input type="submit" value="Calcular">
+    </form>
+  </main>
+
+  <section>
+    <h2>Estrutura da Divisão</h2>
+    <table class="divisao">
+      <tr>
+        <td id="dividendo">0</td>
+        <td id="divisor">1</td>
+      </tr>
+      <tr>
+        <td id="resto">0</td>
+        <td id="quociente">0</td>
+      </tr>
+    </table>
+  </section>
+
+  <script>
+    document.getElementById('myForm').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const dividendo = document.getElementById('d1').value || 0;
+      const divisor = document.getElementById('d2').value || 1;
+      const quociente = Math.floor(dividendo / divisor);
+      const resto = dividendo % divisor;
+
+      document.getElementById('dividendo').textContent = dividendo;
+      document.getElementById('divisor').textContent = divisor;
+      document.getElementById('quociente').textContent = quociente;
+      document.getElementById('resto').textContent = resto;
+    });
+  </script>
+</body>
+
+</html>
