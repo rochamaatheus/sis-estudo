@@ -1,6 +1,4 @@
-# Bikcraft
-
-![Capa_Site]()
+# Sis-Estudos
 
 Este repositório possui diversas páginas com o intuito de ajudar a minha irmã a estudar.
 
