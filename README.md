@@ -16,6 +16,12 @@ Este repositório possui diversas páginas com o intuito de ajudar a minha irmã
   Este projeto, mesmo sendo apenas para questões educionais, aborda diferentes meios de usar o JavaScript para concluir determinadas tarefas.
 </div>
 
+---
+
+## Páginas
+
+- [Divisão](https://rochamaatheus.github.io/sis-estudo/Divisao/)
+
 ## Contato
 
 Se você tiver alguma dúvida ou precisar de assistência adicional, fique à vontade para entrar em contato através do LinkedIn, Instagram ou por e-mail. As informações de contato estão disponíveis na minha página principal do GitHub.
