@@ -22,6 +22,7 @@ Este repositório possui diversas páginas com o intuito de ajudar a minha irmã
 
 - [Divisão](https://rochamaatheus.github.io/sis-estudo/Divisao/)
 - [Raíz](https://rochamaatheus.github.io/sis-estudo/Raiz/)
+- [Média](https://rochamaatheus.github.io/sis-estudo/Media/)
 
 ## Contato
 
