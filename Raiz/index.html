@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raízes</title>
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    #squareRootExplanation,
+    #cubeRootExplanation {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <form id="form">
+      <label for="numero">Número</label>
+      <input type="number" name="numero" id="numero">
+      <input type="submit" value="Calcular">
+    </form>
+  </main>
+  <section id="resultSection" style="display: none;">
+    <h2>Resultado Final</h2>
+    <p>Analisando o número <strong id="numDisplay"></strong> temos:</p>
+    <ul>
+      <li>Sua raíz quadrada: <strong id="raizQuadrada"></strong></li>
+      <li>Sua raíz cúbica: <strong id="raizCubica"></strong></li>
+    </ul>
+  </section>
+  <section id="explanationSection" style="display: none;">
+    <h2>Explicação</h2>
+    <p>Isso porque:</p>
+    <ul>
+      <li><strong id="numDisplay2"></strong> x <strong id="numDisplay3"></strong> = <strong id="squareRootExplanation"></strong></li>
+      <li><strong id="numDisplay4"></strong> x <strong id="numDisplay5"></strong> x <strong id="numDisplay6"></strong> = <strong id="cubeRootExplanation"></strong></li>
+    </ul>
+  </section>
+  <script>
+    function updateElement(id, value) {
+      document.getElementById(id).innerText = value;
+    }
+
+    document.getElementById('form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      const num = document.getElementById('numero').value;
+      if (!isNaN(num)) {
+        const rq = Math.sqrt(num);
+        const rc = Math.cbrt(num);
+
+        const raizQuadrada = rq.toFixed(3);
+        const raizCubica = rc.toFixed(3);
+
+        updateElement('numDisplay', num);
+        updateElement('raizQuadrada', raizQuadrada);
+        updateElement('raizCubica', raizCubica);
+        document.getElementById('resultSection').style.display = 'block';
+
+        updateElement('numDisplay2', raizQuadrada);
+        updateElement('numDisplay3', raizQuadrada);
+        updateElement('squareRootExplanation', num);
+
+        updateElement('numDisplay4', raizCubica);
+        updateElement('numDisplay5', raizCubica);
+        updateElement('numDisplay6', raizCubica);
+        updateElement('cubeRootExplanation', num);
+
+        document.getElementById('explanationSection').style.display = 'block';
+      }
+    });
+  </script>
+</body>
+
+</html>
